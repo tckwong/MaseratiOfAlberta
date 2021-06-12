@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import '_variables.scss';
+
+body {
+    font-family: $site-font-fam;
+    background-color: white;
+}
+
+#HeaderGridContainer {
+    display:grid;
+    position: fixed;
+    grid-template-columns: .3fr 6fr 3fr 4fr;
+    grid-template-rows: 3fr 2fr;
+    height: 15vh;
+    margin: 0 10vw;
+    background-color: white;
+    margin-left: $gridMarginLeft;
+    font-family: $site-font-fam;
+    
+    #logo {
+        height: 60px;
+    }
+   
+    h1 {
+        align-self: center;
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+    nav {
+        margin: 10px 0;
+        grid-column: 1 / span 3;
+        border-top: 1px solid;
+        height: 10vh;
+    }
+
+    nav > a {
+        color: $textColor;
+        text-decoration: none;
+        padding: 0 7px;
+        align-self: center;
+    }
+
+    a:link {
+        text-decoration: none;
+        color: $textColor;
+    }
+}
+
+.navDropdown {
+    position: relative;
+    display: inline-block;
+  
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f98a;
+        min-width: 150px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 12px 16px;
+        background-color: white;
+    }  
+
+    &:hover .dropdown-content {
+        display: block;
+    }
+
+}
+
+main {
+      
+    #models {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 0.5fr, 1fr;
+        height: 100%;
+        justify-items: center;
+        align-items: center;
+        background-color: white;
+        margin-bottom: 60px;
+        padding-top: 250px;
+        margin-right: $gridMarginRight;
+        margin-left: $gridMarginLeft;
+        font-family: $site-font-fam;
+        }
+        
+        h1 {
+            grid-column: 1/ span 3;
+            height: 5vh;
+            font-family: $site-font-fam;
+        }
+
+        .type-img {
+            width: 70%;
+        }
+
+        .model-btn {
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            width: 20vw;
+        }
+
+        .btn-inventory {
+            padding: 9px 20px;
+            margin-right: 9px;
+            background-color: #0c2340;
+            color: white;
+            border-radius: 3px;
+            font-size: 0.6rem;
+            border: 1px black solid;
+        }
+
+        .btn-explore {
+            padding: 9px 50px;
+            border-radius: 3px;
+            font-size: 0.6rem;
+            border: 1px black solid;
+        }
+
+        #schedule-service-containter {
+            border: 1px solid black;
+            height: 30vh;
+            color: white;
+            margin-right: $gridMarginRight;
+            margin-left: $gridMarginLeft;        
+            background-image: url('https://d3n59x29ux27uj.cloudfront.net/wp-content/uploads/2020/09/10160945/ScheduleAServiceBG-RedMaseratiLevanteParked.jpg');
+            background-repeat:no-repeat;
+            background-size: cover;
+            margin-bottom: 30px;
+        }
+}
+
+#mapGridContainer {
+    display: grid;
+    grid-template-columns: 3fr 2fr ;
+    margin-right: $gridMarginRight;
+    margin-left: $gridMarginLeft;
+    
+    img {
+        width: 90%;
+        justify-self: right;
+    }
+
+    .formContainer {
+        border: 1px solid black;
+    }
+    
+    div {
+        background-color: rgb(219, 219, 219);
+    }
+}
+
+#facebook {
+    height:18px;
+    justify-self: center;
+    padding: 2px;
+}
+
+footer {
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 2fr;
+    height: 30vh;
+    width: 100%;
+    background-color: #333333;
+    overflow: auto;
+    color: white;
+    li > a {
+        color: white
+            }
+    a > #edealer {
+        height:30px;
+        max-width: 70px;
+            }
+        }
+        
+#edealer {
+    max-width: 50px;
+}
+
+#social {
+    filter: invert(100%);
+}
+
+
+#sitePrivacy {
+    color: white;
+}
